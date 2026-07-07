@@ -1,88 +1,99 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Haechy ❤️‍🩹</title>
+<title>هیچی Haechy❤️‍🩹</title>
 
 <style>
+
+*{
+box-sizing:border-box;
+}
+
 body{
-    margin:0;
-    padding-bottom:80px;
-    background:#0b0b0b;
-    color:white;
-    font-family:tahoma, sans-serif;
+margin:0;
+background:#090909;
+color:white;
+font-family:tahoma, sans-serif;
+padding-bottom:80px;
 }
 
 header{
-    text-align:center;
-    padding:30px 15px;
+text-align:center;
+padding:30px 15px;
 }
 
 .logo{
-    font-size:38px;
-    color:#ff6680;
+font-size:38px;
+font-weight:bold;
+color:#ff6680;
 }
 
-.subtitle{
-    color:#aaa;
+.desc{
+color:#aaa;
+font-size:16px;
 }
+
 
 .card{
-    background:#181818;
-    margin:20px;
-    padding:20px;
-    border-radius:20px;
-    line-height:2;
-    font-size:18px;
+background:#171717;
+margin:18px;
+padding:20px;
+border-radius:22px;
+line-height:2;
+box-shadow:0 5px 20px #000;
 }
 
-.actions{
-    display:flex;
-    justify-content:space-around;
-    margin-top:15px;
-}
 
 button{
-    background:#ff6680;
-    color:white;
-    border:0;
-    border-radius:20px;
-    padding:10px 15px;
+border:none;
+background:#ff6680;
+color:white;
+padding:10px 18px;
+border-radius:25px;
+font-size:15px;
 }
 
-.section{
-    display:none;
-    text-align:center;
-    padding:20px;
-}
-
-.section h2{
-    color:#ff6680;
-}
-
-.score{
-    font-size:45px;
-    color:#ffd166;
-}
 
 .menu{
-    position:fixed;
-    bottom:0;
-    right:0;
-    left:0;
-    background:#151515;
-    display:flex;
-    justify-content:space-around;
-    padding:15px 5px;
+position:fixed;
+bottom:0;
+right:0;
+left:0;
+height:70px;
+background:#151515;
+display:flex;
+justify-content:space-around;
+align-items:center;
 }
 
+
 .menu button{
-    background:none;
-    padding:5px;
-    font-size:13px;
+background:none;
+color:white;
+font-size:13px;
+padding:5px;
 }
+
+
+.page{
+display:none;
+}
+
+
+.active{
+display:block;
+}
+
+
+h2{
+color:#ff6680;
+text-align:center;
+}
+
 
 </style>
 
@@ -92,76 +103,107 @@ button{
 
 
 <header>
-<div class="logo">Haechy ❤️‍🩹</div>
 
-<p class="subtitle">
-جایی برای حرف‌هایی که هیچ‌وقت گفته نشد...
+<div class="logo">
+هیچی Haechy❤️‍🩹
+</div>
+
+<p class="desc">
+جایی برای حرف‌ هایی که هیچ‌ وقت گفته نشد...
 </p>
+
 </header>
 
 
-<div id="home" class="section" style="display:block">
-
-<div class="card">
-بعضی دردها را نمی‌شود گفت...
-فقط باید آرام لبخند زد و ادامه داد ❤️‍🩹
-
-<div class="actions">
-<button onclick="like()">❤️ <span id="likes">0</span></button>
-<button>↗ اشتراک</button>
-</div>
-
-</div>
+<div id="home" class="page active">
 
 
 <div class="card">
-گاهی کسی که بیشتر دوستش داری،
-همان کسی است که بیشتر دلت را می‌شکند...
-</div>
 
-</div>
+گاهی سکوت، بلند ترین فریاد یک قلب شکسته است... ❤️‍🩹
 
+<br><br>
 
-
-<div id="points" class="section">
-
-<h2>⭐ امتیاز من</h2>
-
-<div class="score">
-<span id="point">100</span>
-</div>
-
-<p>
-با فعالیت در Haechy امتیاز جمع کنید.
-</p>
-
-</div>
-
-
-
-<div id="invite" class="section">
-
-<h2>👥 دعوت دوستان</h2>
-
-<p>
-لینک خود را با دوستان شریک کنید و امتیاز بگیرید.
-</p>
-
-<button>
-کپی لینک دعوت
+<button onclick="likePost()">
+❤️ لایک <span id="likes">0</span>
 </button>
 
 </div>
 
 
+<div class="card">
 
-<div id="profile" class="section">
+بعضی آدم‌ ها می‌ روند،
+اما خاطره‌ شان تا همیشه در دل می‌ ماند...
+
+</div>
+
+
+</div><div id="points" class="page">
+
+<h2>⭐ امتیاز من</h2>
+
+<div class="card" style="text-align:center;">
+
+<p>امتیاز فعلی:</p>
+
+<h1 id="score" style="color:#ffd166;">
+100
+</h1>
+
+<button onclick="addScore()">
++ دریافت امتیاز
+</button>
+
+<p id="scoreMsg"></p>
+
+</div>
+
+</div>
+
+
+
+<div id="invite" class="page">
+
+<h2>👥 دعوت دوستان</h2>
+
+<div class="card" style="text-align:center;">
+
+<p>
+دوستان خود را دعوت کنید و امتیاز بگیرید ❤️‍🩹
+</p>
+
+<p id="inviteLink"></p>
+
+<button onclick="copyInvite()">
+کپی لینک دعوت
+</button>
+
+</div>
+
+</div>
+
+
+
+<div id="profile" class="page">
 
 <h2>👤 پروفایل</h2>
 
+<div class="card" style="text-align:center;">
+
 <p>
-کاربر Haechy ❤️‍🩹
+نام کاربر:
 </p>
+
+<h3>
+کاربر Haechy ❤️‍🩹
+</h3>
+
+<p>
+عضویت در خانواده هیچی
+</p>
+
+</div>
 
 </div>
 
@@ -169,48 +211,82 @@ button{
 
 <div class="menu">
 
-<button onclick="show('home')">
+<button onclick="showPage('home')">
 🏠 خانه
 </button>
 
-<button onclick="show('points')">
+<button onclick="showPage('points')">
 ⭐ امتیاز
 </button>
 
-<button onclick="show('invite')">
+<button onclick="showPage('invite')">
 👥 دعوت
 </button>
 
-<button onclick="show('profile')">
+<button onclick="showPage('profile')">
 👤 پروفایل
 </button>
 
-</div>
+</div><script>
 
+function showPage(page){
 
+let pages=document.querySelectorAll(".page");
 
-<script>
-
-function show(id){
-
-let sections=document.querySelectorAll('.section');
-
-sections.forEach(function(s){
-s.style.display="none";
+pages.forEach(function(p){
+p.classList.remove("active");
 });
 
-document.getElementById(id).style.display="block";
+document.getElementById(page).classList.add("active");
 
 }
 
 
-function like(){
 
-let x=document.getElementById("likes");
+function likePost(){
 
-x.innerHTML=parseInt(x.innerHTML)+1;
+let likes=document.getElementById("likes");
+
+let number=parseInt(likes.innerHTML);
+
+likes.innerHTML=number+1;
 
 }
+
+
+
+function addScore(){
+
+let score=document.getElementById("score");
+
+let value=parseInt(score.innerHTML);
+
+value=value+10;
+
+score.innerHTML=value;
+
+document.getElementById("scoreMsg").innerHTML=
+"۱۰ امتیاز به شما اضافه شد ❤️‍🩹";
+
+}
+
+
+
+function copyInvite(){
+
+let link=window.location.href;
+
+navigator.clipboard.writeText(link);
+
+alert("لینک دعوت کپی شد ❤️‍🩹");
+
+}
+
+
+
+document.getElementById("inviteLink").innerHTML =
+window.location.href;
+
 
 </script>
 
