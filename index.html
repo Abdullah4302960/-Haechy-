@@ -14,11 +14,98 @@ box-sizing:border-box;
 }
 
 body{
+*{
+box-sizing:border-box;
+}
+
+body{
 margin:0;
-background:#080808;
-color:#fff;
+background:
+linear-gradient(180deg,#090909,#160d12);
+color:white;
 font-family:tahoma, sans-serif;
-padding-bottom:80px;
+padding-bottom:90px;
+}
+
+header{
+text-align:center;
+padding:35px 15px 20px;
+}
+
+.logo{
+font-size:40px;
+font-weight:bold;
+color:#ff7b9c;
+text-shadow:0 0 15px #ff365f;
+}
+
+.subtitle{
+color:#c0c0c0;
+line-height:2;
+}
+
+
+.card{
+background:rgba(255,255,255,0.06);
+border:1px solid rgba(255,120,150,0.15);
+margin:18px;
+padding:25px;
+border-radius:25px;
+line-height:2.2;
+font-size:18px;
+box-shadow:0 8px 25px rgba(0,0,0,.5);
+}
+
+
+.btn{
+background:linear-gradient(45deg,#ff4f7b,#ff8aa5);
+color:white;
+border:none;
+padding:11px 25px;
+border-radius:30px;
+font-size:15px;
+}
+
+
+.menu{
+position:fixed;
+bottom:0;
+left:0;
+right:0;
+height:75px;
+background:rgba(20,20,20,.95);
+border-top:1px solid #333;
+display:flex;
+justify-content:space-around;
+align-items:center;
+}
+
+
+.menu button{
+background:none;
+border:none;
+color:#ddd;
+font-size:13px;
+}
+
+
+.menu button:hover{
+color:#ff7b9c;
+}
+
+
+h2{
+color:#ff7b9c;
+text-align:center;
+}
+
+
+.score{
+font-size:55px;
+color:#ffd166;
+text-align:center;
+text-shadow:0 0 15px #ffd166;
+}
 }
 
 header{
