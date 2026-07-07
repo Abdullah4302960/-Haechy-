@@ -226,7 +226,7 @@ text-align:center;
 <h2>📢 کانال اصلی هیچی Haechy❤️‍🩹</h2>
 
 <p>
-برای دیدن نوشته‌های جدید و پست‌های تازه، به کانال اصلی ما بپیوندید.
+برای دیدن نوشته‌ های جدید و پست‌ های تازه، به کانال اصلی ما بپیوندید.
 </p>
 
 <a href="https://whatsapp.com/channel/0029Vb83ghH3QxRzgDtZon20" target="_blank">
@@ -236,6 +236,70 @@ text-align:center;
 </button>
 
 </a>
+
+</div><div class="card">
+
+<h2>🖤 آخرین نوشته‌ های هیچی Haechy❤️‍🩹</h2>
+
+</div>
+
+
+<div class="card">
+
+گاهی آدم‌ ها نمی‌ روند...
+
+فقط جای حضور شان را با یک خاطره پر می‌ کنند. ❤️‍🩹
+
+<br><br>
+
+<button class="btn" onclick="likePost()">
+❤️ لایک
+</button>
+
+<button class="btn" onclick="sharePost()">
+↗ اشتراک
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+سخت‌ ترین درد این نیست که کسی را از دست بدهی...
+
+سخت‌ ترین درد این است که همان آدم،
+دیگر مثل گذشته دوستت نداشته باشد... 🖤
+
+<br><br>
+
+<button class="btn" onclick="likePost()">
+❤️ لایک
+</button>
+
+<button class="btn" onclick="sharePost()">
+↗ اشتراک
+</button>
+
+</div>
+
+
+
+<div class="card">
+
+بعضی حرف‌ ها هیچ‌ وقت گفته نمی‌ شوند...
+
+اما همیشه در قلب ما زندگی می‌ کنند. ❤️‍🩹
+
+<br><br>
+
+<button class="btn" onclick="likePost()">
+❤️ لایک
+</button>
+
+<button class="btn" onclick="sharePost()">
+↗ اشتراک
+</button>
 
 </div>
 
@@ -347,62 +411,26 @@ text-align:center;
 
 
 
-<script>
+function sharePost(){
 
-function showPage(id){
+if(navigator.share){
 
-let pages=document.querySelectorAll(".page");
-
-pages.forEach(function(page){
-
-page.classList.remove("active");
-
+navigator.share({
+title:"هیچی Haechy❤️‍🩹",
+text:"یک نوشته زیبا از Haechy❤️‍🩹",
+url:window.location.href
 });
 
-document.getElementById(id).classList.add("active");
+}else{
+
+alert("لینک آماده اشتراک‌ گذاری است");
 
 }
 
-
-
-function likePost(){
-
-let likes=document.getElementById("likes");
-
-likes.innerHTML=parseInt(likes.innerHTML)+1;
-
 }
 
+<script>
 
-
-function addScore(){
-
-let score=document.getElementById("score");
-
-score.innerHTML=parseInt(score.innerHTML)+10;
-
-document.getElementById("scoreMessage").innerHTML=
-"۱۰ امتیاز اضافه شد ❤️‍🩹";
-
-}
-
-
-
-document.getElementById("inviteLink").innerHTML=
-window.location.href;
-
-
-
-function copyLink(){
-
-navigator.clipboard.writeText(window.location.href);
-
-alert("لینک دعوت کپی شد ❤️‍🩹");
-
-}
-
-
-</script>
 
 
 </body>
