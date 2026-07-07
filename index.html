@@ -3,42 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Haechy ❤️‍🩹</title>
 
 <style>
-body {
-  margin: 0;
-  background: #111;
-  color: white;
-  font-family: sans-serif;
-  text-align: center;
+body{
+margin:0;
+background:#0b0b0b;
+color:white;
+font-family:tahoma;
 }
 
-.header {
-  padding: 30px 10px;
+header{
+text-align:center;
+padding:30px;
 }
 
-h1 {
-  color: #ff6b81;
-  font-size: 36px;
+.logo{
+font-size:38px;
+color:#ff6680;
 }
 
-.card {
-  background: #1e1e1e;
-  margin: 20px;
-  padding: 20px;
-  border-radius: 15px;
-  font-size: 20px;
-  line-height: 2;
+.subtitle{
+color:#aaa;
 }
 
-button {
-  background: #ff6b81;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  margin: 5px;
+.post{
+background:#181818;
+margin:20px;
+padding:20px;
+border-radius:20px;
+box-shadow:0 0 10px #000;
+font-size:18px;
+line-height:2;
+}
+
+.actions{
+margin-top:15px;
+display:flex;
+justify-content:space-around;
+}
+
+button{
+background:#ff6680;
+border:0;
+color:white;
+padding:8px 15px;
+border-radius:20px;
+}
+
+.menu{
+position:fixed;
+bottom:0;
+width:100%;
+background:#151515;
+display:flex;
+justify-content:space-around;
+padding:15px 0;
+}
+
+.menu div{
+color:#ff6680;
+font-size:14px;
 }
 </style>
 
@@ -46,23 +72,39 @@ button {
 
 <body>
 
-<div class="header">
-<h1>Haechy ❤️‍🩹</h1>
-<p>جایی برای حرف‌هایی که هیچ‌وقت گفته نشد...</p>
-</div>
+<header>
+<div class="logo">Haechy ❤️‍🩹</div>
+<p class="subtitle">
+جایی برای حرف‌هایی که هیچ‌وقت گفته نشد...
+</p>
+</header>
 
-<div class="card">
+
+<div class="post">
 بعضی دردها را نمی‌شود گفت...
 فقط باید آرام لبخند زد و ادامه داد ❤️‍🩹
-<br><br>
-<button>❤️ لایک</button>
+
+<div class="actions">
+<button>❤️ 0</button>
 <button>↗ اشتراک</button>
 </div>
+</div>
 
-<div class="card">
+
+<div class="post">
 گاهی کسی که بیشتر دوستش داری،
 همان کسی است که بیشتر دلت را می‌شکند...
 </div>
+
+
+<div class="menu">
+<div>🏠 خانه</div>
+<div>💌 احساسات</div>
+<div>⭐ امتیاز</div>
+<div>👥 دعوت</div>
+<div>👤 پروفایل</div>
+</div>
+
 
 </body>
 </html>
