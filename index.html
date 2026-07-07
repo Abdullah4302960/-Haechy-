@@ -413,19 +413,25 @@ text-align:center;
 
 function sharePost(){
 
+let text = "یک نوشته زیبا از هیچی Haechy❤️‍🩹";
+
 if(navigator.share){
 
 navigator.share({
 title:"هیچی Haechy❤️‍🩹",
-text:"یک نوشته زیبا از Haechy❤️‍🩹",
+text:text,
 url:window.location.href
 });
 
 }else{
 
-alert("لینک آماده اشتراک‌ گذاری است");
+alert(text + "\n\n" + window.location.href);
 
 }
+
+}function likePost(){
+
+alert("❤️ پسندیده شد");
 
 }
 
